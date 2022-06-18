@@ -1,4 +1,6 @@
-export {}
+//import '../css/style.css
+import '../js/nav'
+import '../js/effectanima'
 
 const header = document.querySelector('header') as HTMLHeadingElement
 
