@@ -10,4 +10,4 @@ export const titleAnimated = () => {
     })
 }
 
-titleAnimated()
+setTimeout(titleAnimated, 500)

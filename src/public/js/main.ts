@@ -1,16 +1,19 @@
 //import '../css/style.css
-import '../js/nav'
-import '../js/effectanima'
+import './nav'
+import './effectanima'
+import './animatedStacks'
+import './linkInterno'
 
-const header = document.querySelector('header') as HTMLHeadingElement
+import { scrollListener as scrollTop } from './animeScroll'
+import { scrollListener } from './scrollHeader'
+import { debounce } from './debouce'
+import { scrollSkills } from './scollSkills'
 
-const scrollListener = () => {
-    if (window.scrollY >= 10) {
-        console.log(window.screenY)
-        header.style.backgroundColor = '#121212 '
-    } else {
-        header.style.backgroundColor = 'transparent '
-    }
-}
-
-window.addEventListener('scroll', scrollListener)
+window.addEventListener(
+    'scroll',
+    debounce(() => {
+        scrollTop()
+        scrollListener()
+        scrollSkills()
+    }, 100)
+)

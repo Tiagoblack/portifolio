@@ -177,6 +177,25 @@ ul li a:hover::after {
     position: relative;
 }
 
+@keyframes home-animado-after {
+    0% {
+        clip-path: circle(0%);
+    }
+
+    100% {
+        clip-path: circle(30% at right 20%);
+    }
+}
+
+@keyframes home-animado-before {
+    0% {
+        clip-path: circle(0%);
+    }
+
+    100% {
+        clip-path: circle(30% at left 80%);
+    }
+}
 #home::after {
     content: '';
     z-index: 1;
@@ -185,7 +204,9 @@ ul li a:hover::after {
     position: absolute;
     left: 0px;
     top: 0px;
-    clip-path: circle(30% at right 20%);
+    animation: home-animado-after ease 1s forwards;
+
+    /* clip-path: circle(30% at right 20%); */
     background: linear-gradient(to left, #11998e, #38ef7d);
 }
 
@@ -197,7 +218,8 @@ ul li a:hover::after {
     position: absolute;
     left: 0px;
     top: 0px;
-    clip-path: circle(30% at left 80%);
+    animation: home-animado-before ease 2s forwards;
+    /* clip-path: circle(30% at left 80%); */
     background: linear-gradient(to left, #11998e, #38ef7d);
 }
 
@@ -214,6 +236,7 @@ ul li a:hover::after {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     -moz-backdrop: blur(10px);
+
     -ms-backdrop: blur(10px);
 }
 #particles-js {
@@ -222,7 +245,7 @@ ul li a:hover::after {
     top: 50%;
     z-index: 3;
     height: 70%;
-    width: 80%;
+    width: 70%;
     transform: translate3d(50%, -50%, 0px);
     border-radius: 1rem;
     backdrop-filter: blur(10px);
@@ -333,6 +356,9 @@ ul li a:hover::after {
     #particles-js {
         width: 90%;
     }
+    .container_button-media i {
+        color: #ffff;
+    }
 }
 
 /* ================================== sobre ================================ */
@@ -348,7 +374,7 @@ ul li a:hover::after {
     flex-wrap: wrap;
     gap: 1rem;
 }
-.content-sobre {
+#content-sobre {
     flex: 1 1 300px;
 }
 
@@ -405,7 +431,7 @@ ul li a:hover::after {
 
 /* ======================================= skills ============================ */
 
-.skills {
+#skills {
     overflow-y: hidden;
     background-color: #121212;
     padding: 60px 0px;
@@ -426,6 +452,12 @@ ul li a:hover::after {
     gap: 1rem;
 }
 
+@keyframes content {
+    100% {
+        transform: scale(1);
+    }
+}
+
 .content-skills {
     position: relative;
     overflow: hidden;
@@ -438,7 +470,15 @@ ul li a:hover::after {
     flex-direction: column;
     background-color: #121212;
     cursor: pointer;
+    display: none;
+    transform: scale(0.5);
 }
+
+.content-skills.active {
+    display: flex;
+    animation: content 0.2s ease forwards;
+}
+
 .content-skills::after {
     content: '';
     position: absolute;
@@ -490,7 +530,7 @@ ul li a:hover::after {
 }
 /* ====================================projeto================================= */
 
-.projeto {
+#projeto {
     background-color: #121212;
     padding: 40px 0px;
 }
@@ -590,13 +630,12 @@ ul li a:hover::after {
 }
 /* ====================================contato============================ */
 
-.contato {
+#contato {
     position: relative;
-
     background-color: #121212;
 }
 
-.contato::after {
+#contato::after {
     content: '';
     position: absolute;
     left: 0px;
@@ -621,7 +660,7 @@ ul li a:hover::after {
     flex-wrap: wrap;
     gap: 1rem;
 }
-.content_form {
+.form {
     width: 464px;
 }
 
@@ -731,4 +770,22 @@ form a {
     .container_img-contato {
         order: 2;
     }
+}
+
+[data-anime] {
+    opacity: 0;
+    transition: 1s ease;
+}
+
+[data-anime='left'] {
+    transform: translateX(-50px);
+}
+
+[data-anime='right'] {
+    transform: translateX(50px);
+}
+
+[data-anime].numo {
+    opacity: 1;
+    transform: translateX(0px);
 }
