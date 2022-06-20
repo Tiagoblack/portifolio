@@ -32,18 +32,33 @@
                         </div>
                         <nav>
                             <ul>
-                                <li><a href="#home">home</a></li>
-                                <li><a href="#sobre">sobre</a></li>
-                                <li><a href="#skills">skills</a></li>
-                                <li><a href="#projeto">projeto</a></li>
-                                <li><a href="#contato">contato </a></li>
+                                <li>
+                                    <div class="space-header active"></div>
+                                    <a href="#home">home</a>
+                                </li>
+                                <li>
+                                    <div class="space-header"></div>
+                                    <a href="#sobre">sobre</a>
+                                </li>
+                                <li>
+                                    <div class="space-header"></div>
+                                    <a href="#skills">skills</a>
+                                </li>
+                                <li>
+                                    <div class="space-header"></div>
+                                    <a href="#projeto">projeto</a>
+                                </li>
+                                <li>
+                                    <div class="space-header"></div>
+                                    <a href="#contato">contato </a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
         </header>
-        <section id="home">
+        <section data-index="0" id="home">
             <div class="port_home" id="particles-js">
                 <div class="position">
                     <h1 class="porti_title"></h1>
@@ -56,7 +71,7 @@
                         voluptate dolorum nobis doloremque ipsam placeat, aut
                         molestiae!
                     </p>
-                    <a href="#" class="button">Contate-me</a>
+                    <a href="#contato" class="button">Contate-me</a>
                     <div class="container_button-media">
                         <div class="media_button">
                             <i class="fab fa-facebook-f"></i>
@@ -79,7 +94,7 @@
                 </div>
             </div>
         </section>
-        <section id="sobre">
+        <section data-index="1" id="sobre">
             <div class="container">
                 <h2 class="title-sobre">Sobre Mim</h2>
                 <div class="container_sobre">
@@ -107,7 +122,7 @@
             </div>
         </section>
 
-        <section id="skills">
+        <section data-index="2" id="skills">
             <div class="container">
                 <h2 class="title-skills">Minhas Skills</h2>
                 <div class="container-skills">
@@ -144,7 +159,7 @@
                 </div>
             </div>
         </section>
-        <section id="projeto">
+        <section data-index="3" id="projeto">
             <h2 class="title-projeto">Meus Projetos</h2>
             <div class="container">
                 <div class="container-projeto">
@@ -244,7 +259,7 @@
                 </div>
             </div>
         </section>
-        <section id="contato">
+        <section data-index="4" id="contato">
             <div class="container">
                 <h2 class="title-contato">Contate-me</h2>
                 <div class="container-contato">
@@ -286,12 +301,31 @@
                 </div>
             </div>
         </section>
+        <div class="container_modal">
+            <div class="modal">
+                <div class="close_modal">
+                    <i class="fas fa-close"></i>
+                </div>
+                <div class="content_modal">
+                    <h3 class="title-modal"></h3>
+                    <div class="container_infor">
+                        <div class="container_img-modal">
+                            <img src="" />
+                        </div>
+                        <div class="content_modal-info">
+                            <div class="contaiener_stacks-modal"></div>
+                            <p class="desc-modal"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             copyright&copy; 2022 xlzthiago@gmail.com. Todos os direitos
             reservados
         </footer>
-        <script src="./src/public/js/particles.js"></script>
-        <script src="./src/public/js/app.js"></script>
+        <!-- <script src="./src/public/js/particles.js"></script>
+        <script src="./src/public/js/app.js"></script> -->
         <script type="module" src="./src/public/js/main.ts"></script>
     </body>
 </html>
