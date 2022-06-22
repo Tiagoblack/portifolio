@@ -2,7 +2,7 @@
 
 ![](./portifolio.png)
 
-## Pre-requisitos
+## Pré-requisitos
 -   node
 -   vite (typescript)
 
