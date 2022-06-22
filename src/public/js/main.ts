@@ -4,6 +4,7 @@ import './effectanima'
 import './animatedStacks'
 import './linkInterno'
 import './modalStack'
+import './floatClick'
 
 import { scrollIndexLink } from './srcollLink'
 
