@@ -42,6 +42,13 @@ img {
     }
 }
 
+@media (max-with: 319px) {
+    .container {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
 * {
     scrollbar-width: thin;
     scrollbar-color: #38ef7d #121212;
@@ -90,7 +97,7 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: 3px;
     font-size: 40px;
     background: -webkit-linear-gradient(#eee, #333);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -159,6 +166,30 @@ ul li:hover .space-header {
 .close {
     display: none;
     font-size: 1.3em;
+}
+@media (max-width: 319px) {
+    .container_header {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    nav ul {
+        overflow: hidden;
+        gap: 0px;
+        background-color: #333;
+        position: absolute;
+        width: 150px;
+        max-height: 0px;
+        top: 45px;
+        left: 1rem;
+        display: none;
+        flex-direction: column;
+        animation: nav 1s ease forwards;
+        border-radius: 0.5rem;
+    }
+
+    .menu {
+        display: block;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -361,14 +392,52 @@ ul li:hover .space-header {
     font-size: 2rem;
 }
 
+@media (max-width: 319px) {
+    #particles-js {
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        z-index: 3;
+        height: 70%;
+        width: 95%;
+        transform: translate3d(50%, -50%, 0px);
+        border-radius: 1rem;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .porti_title {
+        font-size: 1.5em;
+    }
+    .container_button-media i {
+        color: #ffff;
+    }
+    /* .porti_desc {
+        font-family: 'Ubuntu Mono', monospace;
+        color: #d1d1d1;
+        max-width: 280px;
+        line-height: calc(1.4 * 0.7rem);
+    }
+    .porti_subtitle {
+        color: #d1d1d1;
+        margin: 4px 0px;
+        font-family: 'Ubuntu Mono', monospace;
+        font-size: 0.75em;
+    } */
+}
 @media (min-width: 320px) and (max-width: 767px) {
+    .porti_title {
+        font-size: 1.75em;
+    }
+    .porti_subtitle {
+        font-size: 1rem;
+    }
     .button {
         font-size: 1em;
         width: 40%;
     }
 
     #particles-js {
-        width: 90%;
+        width: 95%;
     }
     .container_button-media i {
         color: #ffff;
@@ -389,11 +458,11 @@ ul li:hover .space-header {
     gap: 1rem;
 }
 #content-sobre {
-    flex: 1 1 300px;
+    flex: 1 1 280px;
 }
 
 .container_img-sobre {
-    flex: 1 1 300px;
+    flex: 1 1 280px;
 }
 
 .title-sobre {
@@ -430,7 +499,35 @@ ul li:hover .space-header {
     line-height: calc(1.4 * 1.2rem);
     color: #eee;
 }
+@media (max-width: 319px) {
+    .container_sobre {
+        margin: 0 auto;
+    }
+    .title-sobre {
+        font-size: 2rem;
+    }
+    .container_img-sobre {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    .desc-sobre {
+        margin: 0 auto;
+        width: 280px;
+    }
+    .subtitle-sobre {
+        width: 280px;
+        margin: 0 auto;
+    }
+    .subtitle-sobre strong:nth-child(1) {
+        color: #11998e;
+        font-size: 1em;
+    }
 
+    .subtitle-sobre strong:nth-child(3) {
+        color: #38ef7d;
+        font-size: 1em;
+    }
+}
 @media (min-width: 320px) and (max-width: 767px) {
     .subtitle-sobre strong:nth-child(1) {
         color: #11998e;
@@ -525,7 +622,15 @@ ul li:hover .space-header {
     font-size: 5rem;
     color: #ddd;
 }
-
+@media (max-width: 319px) {
+    .title-skills {
+        font-size: 2rem;
+    }
+    .content-skills {
+        margin: 0 auto;
+        width: calc(140px - 1rem);
+    }
+}
 @media (min-width: 320px) and (max-width: 767px) {
     .container {
         max-width: 300px;
@@ -620,6 +725,28 @@ ul li:hover .space-header {
     color: #ddd;
     margin: 1rem auto;
     display: inline-block;
+}
+
+@media (max-width: 319px) {
+    .content-projeto {
+        width: 280px;
+        margin: 0 auto;
+    }
+    .title-projeto {
+        font-size: 2rem;
+    }
+    .position-projeto i {
+        font-size: 1.3em;
+    }
+
+    .nome-projeto {
+        word-wrap: break-word;
+        font-size: 1.5em;
+    }
+
+    .content-title {
+        font-size: 1em;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 980px) {
@@ -757,7 +884,24 @@ form a {
     padding: 40px 0px;
     color: #ddd;
 }
-
+@media (max-width: 319px) {
+    .container-contato {
+        margin: 0 auto;
+        width: 280px;
+    }
+    .title-contato {
+        font-size: 2rem;
+    }
+    .container_img-contato {
+        width: 280px;
+    }
+    form {
+        order: 1;
+    }
+    .container_img-contato {
+        order: 2;
+    }
+}
 @media (min-width: 768px) and (max-width: 980px) {
     .container-contato {
         justify-content: center;
@@ -891,10 +1035,60 @@ form a {
     padding: 1rem;
     font-size: 1.5rem;
 }
+.float_botton {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    height: 62px;
+    width: 62px;
+    z-index: 1000;
+    border-radius: 50%;
+
+    color: #ddd;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #11998e, #38ef7d);
+    cursor: pointer;
+}
+
+.float_botton i {
+    font-size: 24px;
+}
+
+@media (max-width: 319px) {
+    .float_botton {
+        height: 42px;
+        width: 42px;
+    }
+    .modal {
+        width: 80%;
+        height: 70%;
+    }
+    .container_infor {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container_img-modal {
+        width: 90%;
+        height: 50%;
+    }
+    .desc-modal {
+        font-size: 0.7rem;
+        line-height: calc(1.4 * 0.7rem);
+    }
+    .content_modal-info {
+        width: 90%;
+    }
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
     .modal {
         width: 80%;
-        height: 50%;
+        height: 70%;
+    }
+    .title-modal {
+        font-size: 1rem;
     }
     .container_infor {
         flex-direction: column;
@@ -904,8 +1098,8 @@ form a {
         width: 80%;
     }
     .desc-modal {
-        font-size: 1rem;
-        line-height: calc(1.4 * 1rem);
+        font-size: 0.75rem;
+        line-height: calc(1.4 * 0.75rem);
     }
     .content_modal-info {
         width: 80%;
